@@ -70,7 +70,7 @@ namespace GMAO
 			this.radGridView1.EnablePaging = true;
 			this.radGridView1.PageSize = 14;
 			this.radGridView1.MasterView.TableSearchRow.SuspendSearch();
-			bool flag = page_loginn.stat_user == "Administrateur" | page_loginn.stat_user == "Responsable Méthode" | page_loginn.stat_user == "Responsable Achat" | page_loginn.stat_user == "Responsable Magasin";
+			bool flag = UserSession.CurrentUser.Statut == "Administrateur" | UserSession.CurrentUser.Statut == "Responsable Méthode" | UserSession.CurrentUser.Statut == "Responsable Achat" | UserSession.CurrentUser.Statut == "Responsable Magasin";
 			if (flag)
 			{
 				string cmdText = "select commande.id,date_commande, createur from commande inner join fournisseur on commande.id_fournisseur = fournisseur.id where statut = @i and fournisseur.nom = @k";
@@ -429,7 +429,7 @@ namespace GMAO
 									SqlCommand sqlCommand = new SqlCommand(cmdText, bd.cnn);
 									sqlCommand.Parameters.Add("@i1", SqlDbType.Date).Value = DateTime.Today;
 									sqlCommand.Parameters.Add("@i2", SqlDbType.VarChar).Value = fonction.Mid(DateTime.Now.ToString(), 12, 5);
-									sqlCommand.Parameters.Add("@i3", SqlDbType.Int).Value = page_loginn.id_user;
+									sqlCommand.Parameters.Add("@i3", SqlDbType.Int).Value = UserSession.CurrentUser.Id;
 									sqlCommand.Parameters.Add("@i4", SqlDbType.VarChar).Value = this.TextBox1.Text;
 									sqlCommand.Parameters.Add("@i5", SqlDbType.Int).Value = 0;
 									sqlCommand.Parameters.Add("@i6", SqlDbType.Date).Value = this.radDateTimePicker1.Value;
