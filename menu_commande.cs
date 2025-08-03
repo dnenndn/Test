@@ -127,8 +127,7 @@ namespace GMAO
 		// Token: 0x06000E57 RID: 3671 RVA: 0x0022EFD4 File Offset: 0x0022D1D4
 		private void menu_commande_Load(object sender, EventArgs e)
 		{
-			bool flag = page_loginn.stat_user != "Responsable Achat";
-			if (flag)
+			if (UserSession.stat_user != "Responsable Achat")
 			{
 				this.button1.Visible = false;
 			}
