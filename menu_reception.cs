@@ -45,7 +45,7 @@ namespace GMAO
 		// Token: 0x06000E83 RID: 3715 RVA: 0x00232BE0 File Offset: 0x00230DE0
 		private void menu_reception_Load(object sender, EventArgs e)
 		{
-			bool flag = page_loginn.stat_user == "Responsable Magasin" | page_loginn.stat_user == "Magasinier" | page_loginn.stat_user == "Responsable Achat";
+			bool flag = UserSession.CurrentUser.Statut == "Responsable Magasin" | UserSession.CurrentUser.Statut == "Magasinier" | UserSession.CurrentUser.Statut == "Responsable Achat";
 			if (!flag)
 			{
 				this.button1.Hide();

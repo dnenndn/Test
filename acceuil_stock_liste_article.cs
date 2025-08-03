@@ -77,12 +77,19 @@ namespace GMAO
 		private void remplissage_tableau()
 		{
 			this.radGridView3.Rows.Clear();
-			for (int i = 0; i < accueil.article_des.Count; i++)
+            bd bd = new bd();
+            string cmdText = "SELECT designation, stock_neuf FROM article WHERE stock_neuf < stock_min";
+            System.Data.SqlClient.SqlCommand sqlCommand = new System.Data.SqlClient.SqlCommand(cmdText, bd.cnn);
+            System.Data.SqlClient.SqlDataAdapter sqlDataAdapter = new System.Data.SqlClient.SqlDataAdapter(sqlCommand);
+            System.Data.DataTable dataTable = new System.Data.DataTable();
+            sqlDataAdapter.Fill(dataTable);
+
+            for (int i = 0; i < dataTable.Rows.Count; i++)
 			{
 				this.radGridView3.Rows.Add(new object[]
 				{
-					accueil.article_des[i],
-					accueil.article_qt[i]
+					dataTable.Rows[i]["designation"],
+					dataTable.Rows[i]["stock_neuf"]
 				});
 			}
 		}
