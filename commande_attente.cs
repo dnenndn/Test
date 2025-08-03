@@ -34,7 +34,7 @@ namespace GMAO
 		// Token: 0x060002D7 RID: 727 RVA: 0x00078B70 File Offset: 0x00076D70
 		private void DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
 		{
-			bool flag = page_loginn.stat_user == "Responsable Méthode" | page_loginn.stat_user == "Responsable Achat" | page_loginn.stat_user == "Administrateur";
+			bool flag = UserSession.CurrentUser.Statut == "Responsable Méthode" | UserSession.CurrentUser.Statut == "Responsable Achat" | UserSession.CurrentUser.Statut == "Administrateur";
 			if (flag)
 			{
 				commande_attente.id_art = this.dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -153,13 +153,13 @@ namespace GMAO
 					commande_attente.radGridView1.Rows[i].Cells[9].Value = "Annuler";
 					commande_attente.radGridView1.Rows[i].Cells[10].Value = Resources.icons8_supprimer_pour_toujours_100__4_;
 				}
-				bool flag4 = page_loginn.stat_user != "Responsable Achat" & page_loginn.stat_user != "Responsable Méthode" & page_loginn.stat_user != "Administrateur";
+				bool flag4 = UserSession.CurrentUser.Statut != "Responsable Achat" & UserSession.CurrentUser.Statut != "Responsable Méthode" & UserSession.CurrentUser.Statut != "Administrateur";
 				if (flag4)
 				{
 					commande_attente.radGridView1.Columns[8].IsVisible = false;
 					commande_attente.radGridView1.Columns[9].IsVisible = false;
 				}
-				bool flag5 = page_loginn.stat_user != "Responsable Achat";
+				bool flag5 = UserSession.CurrentUser.Statut != "Responsable Achat";
 				if (flag5)
 				{
 					commande_attente.radGridView1.Columns[9].IsVisible = false;
@@ -324,18 +324,18 @@ namespace GMAO
 							}
 							this.label10.Text = num2.ToString("0.000");
 						}
-						bool flag12 = page_loginn.stat_user == "Administrateur" | page_loginn.stat_user == "Responsable Méthode";
+						bool flag12 = UserSession.CurrentUser.Statut == "Administrateur" | UserSession.CurrentUser.Statut == "Responsable Méthode";
 						if (flag12)
 						{
 							this.guna2Button2.Show();
 							this.guna2Button3.Show();
 						}
-						bool flag13 = page_loginn.stat_user == "Responsable Achat";
+						bool flag13 = UserSession.CurrentUser.Statut == "Responsable Achat";
 						if (flag13)
 						{
 							this.guna2Button2.Show();
 						}
-						bool flag14 = page_loginn.stat_user != "Responsable Achat" & page_loginn.stat_user != "Responsable Méthode" & page_loginn.stat_user != "Administrateur";
+						bool flag14 = UserSession.CurrentUser.Statut != "Responsable Achat" & UserSession.CurrentUser.Statut != "Responsable Méthode" & UserSession.CurrentUser.Statut != "Administrateur";
 						if (flag14)
 						{
 							this.dataGridView1.Columns[5].Visible = false;
@@ -612,7 +612,7 @@ namespace GMAO
 					string cmdText = "insert into commande_modification_base (id_commande, modifier_par, date_modification, heure_modification) values (@i1, @i2, @i3, @i4)SELECT CAST(scope_identity() AS int)";
 					SqlCommand sqlCommand = new SqlCommand(cmdText, bd.cnn);
 					sqlCommand.Parameters.Add("@i1", SqlDbType.Int).Value = commande_attente.id_commande;
-					sqlCommand.Parameters.Add("@i2", SqlDbType.Int).Value = page_loginn.id_user;
+					sqlCommand.Parameters.Add("@i2", SqlDbType.Int).Value = UserSession.CurrentUser.Id;
 					sqlCommand.Parameters.Add("@i3", SqlDbType.Date).Value = DateTime.Today;
 					sqlCommand.Parameters.Add("@i4", SqlDbType.VarChar).Value = fonction.Mid(DateTime.Now.ToString(), 12, 5);
 					bd.ouverture_bd(bd.cnn);
@@ -909,7 +909,7 @@ namespace GMAO
 				gridViewTemplate.Columns[3].HeaderTextAlignment = ContentAlignment.MiddleLeft;
 				gridViewTemplate.Columns[4].HeaderTextAlignment = ContentAlignment.MiddleLeft;
 				gridViewTemplate.Columns[5].HeaderTextAlignment = ContentAlignment.MiddleLeft;
-				bool flag2 = page_loginn.stat_user != "Administrateur" & page_loginn.stat_user != "Responsable Méthode" & page_loginn.stat_user != "Responsable Achat";
+				bool flag2 = UserSession.CurrentUser.Statut != "Administrateur" & UserSession.CurrentUser.Statut != "Responsable Méthode" & UserSession.CurrentUser.Statut != "Responsable Achat";
 				if (flag2)
 				{
 					gridViewTemplate.Columns[4].IsVisible = false;
