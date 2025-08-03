@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="GMAO.Properties" GeneratedClassName="Settings" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="abc" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">50, 30</Value>
+    </Setting>
+    <Setting Name="add" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">80, 80</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
