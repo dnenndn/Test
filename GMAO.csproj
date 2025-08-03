@@ -1,0 +1,2538 @@
+﻿
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup xmlns="">  <UserSecretsId>0590d4be-37b5-4b36-adce-0e9bfc68d113</UserSecretsId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B44BDFE2-E340-4D49-9B66-D9AC90306DE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMAO</RootNamespace>
+    <AssemblyName>GMAO</AssemblyName>
+    <TargetFrameworkVersion>net8.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationIcon>GMAO.ico</ApplicationIcon>
+    <StartupObject>GMAO.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52" />
+    <Reference Include="Guna.UI2" />
+    <Reference Include="LiveCharts" />
+    <Reference Include="LiveCharts.WinForms" />
+    <Reference Include="LiveCharts.Wpf" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Telerik.WinControls" />
+    <Reference Include="Telerik.WinControls.ChartView" />
+    <Reference Include="Telerik.WinControls.GridView" />
+    <Reference Include="Telerik.WinControls.PdfViewer" />
+    <Reference Include="Telerik.WinControls.RadDiagram" />
+    <Reference Include="Telerik.WinControls.RichTextEditor" />
+    <Reference Include="Telerik.WinControls.Scheduler" />
+    <Reference Include="Telerik.WinControls.Themes.Aqua" />
+    <Reference Include="Telerik.WinControls.Themes.Breeze" />
+    <Reference Include="Telerik.WinControls.Themes.Crystal" />
+    <Reference Include="Telerik.WinControls.Themes.CrystalDark" />
+    <Reference Include="Telerik.WinControls.Themes.Desert" />
+    <Reference Include="Telerik.WinControls.Themes.Fluent" />
+    <Reference Include="Telerik.WinControls.Themes.FluentDark" />
+    <Reference Include="Telerik.WinControls.Themes.Material" />
+    <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey" />
+    <Reference Include="Telerik.WinControls.Themes.MaterialPink" />
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver" />
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue" />
+    <Reference Include="Telerik.WinControls.Themes.Office2010Silver" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch" />
+    <Reference Include="Telerik.WinControls.UI" />
+    <Reference Include="TelerikData" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="abc1.cs" />
+    <Compile Include="abc2.cs" />
+    <Compile Include="acceuil_maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="acceuil_maintenance.Designer.cs">
+      <DependentUpon>acceuil_maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="acceuil_stock_liste_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="acceuil_stock_liste_article.Designer.cs">
+      <DependentUpon>acceuil_stock_liste_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accueil.Designer.cs">
+      <DependentUpon>accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="achat_sous_traitance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="achat_sous_traitance.Designer.cs">
+      <DependentUpon>achat_sous_traitance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="action.Designer.cs">
+      <DependentUpon>action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action_ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="action_ajouter.Designer.cs">
+      <DependentUpon>action_ajouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="activite_sous_traitance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="activite_sous_traitance.Designer.cs">
+      <DependentUpon>activite_sous_traitance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajouter_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajouter_article.Designer.cs">
+      <DependentUpon>ajouter_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajouter_caractéristique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajouter_caractéristique.Designer.cs">
+      <DependentUpon>ajouter_caractéristique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajouter_devis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajouter_devis.Designer.cs">
+      <DependentUpon>ajouter_devis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajouter_devis_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajouter_devis_st.Designer.cs">
+      <DependentUpon>ajouter_devis_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajouter_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajouter_equipement.Designer.cs">
+      <DependentUpon>ajouter_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajouter_fonction_intervenant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajouter_fonction_intervenant.Designer.cs">
+      <DependentUpon>ajouter_fonction_intervenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajouter_fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajouter_fournisseur.Designer.cs">
+      <DependentUpon>ajouter_fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajouter_Gamme_Opératoire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_Gamme_Opératoire.Designer.cs">
+      <DependentUpon>Ajouter_Gamme_Opératoire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajouter_intervenant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_intervenant.Designer.cs">
+      <DependentUpon>Ajouter_intervenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajouter_moteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajouter_moteur.Designer.cs">
+      <DependentUpon>ajouter_moteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajouter_utilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajouter_utilisateur.Designer.cs">
+      <DependentUpon>ajouter_utilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="approvisionnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="approvisionnement.Designer.cs">
+      <DependentUpon>approvisionnement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app_gerer_planning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app_gerer_planning.Designer.cs">
+      <DependentUpon>app_gerer_planning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app_planifier_da_reapp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app_planifier_da_reapp.Designer.cs">
+      <DependentUpon>app_planifier_da_reapp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app_planifier_da_recomp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app_planifier_da_recomp.Designer.cs">
+      <DependentUpon>app_planifier_da_recomp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app_point_commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app_point_commande.Designer.cs">
+      <DependentUpon>app_point_commande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app_reapprovisionnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app_reapprovisionnement.Designer.cs">
+      <DependentUpon>app_reapprovisionnement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app_recompletement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app_recompletement.Designer.cs">
+      <DependentUpon>app_recompletement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arbre_defaillance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="arbre_defaillance.Designer.cs">
+      <DependentUpon>arbre_defaillance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Arbre_Equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arbre_Equipement.Designer.cs">
+      <DependentUpon>Arbre_Equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="articles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="articles.Designer.cs">
+      <DependentUpon>articles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="article_caracteristique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="article_caracteristique.Designer.cs">
+      <DependentUpon>article_caracteristique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="article_commentaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="article_commentaire.Designer.cs">
+      <DependentUpon>article_commentaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="article_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="article_equipement.Designer.cs">
+      <DependentUpon>article_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="article_fichier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="article_fichier.Designer.cs">
+      <DependentUpon>article_fichier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="article_generale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="article_generale.Designer.cs">
+      <DependentUpon>article_generale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="article_image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="article_image.Designer.cs">
+      <DependentUpon>article_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="article_parametre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="article_parametre.Designer.cs">
+      <DependentUpon>article_parametre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="article_stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="article_stock.Designer.cs">
+      <DependentUpon>article_stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="associer_fournisseur_dop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="associer_fournisseur_dop.Designer.cs">
+      <DependentUpon>associer_fournisseur_dop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bd.cs" />
+    <Compile Include="bl_facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bl_facture.Designer.cs">
+      <DependentUpon>bl_facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bl_facture_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bl_facture_st.Designer.cs">
+      <DependentUpon>bl_facture_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bl_non_facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bl_non_facture.Designer.cs">
+      <DependentUpon>bl_non_facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bl_non_facture_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bl_non_facture_st.Designer.cs">
+      <DependentUpon>bl_non_facture_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bon_commande_encour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bon_commande_encour.Designer.cs">
+      <DependentUpon>bon_commande_encour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bon_commande_encour_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bon_commande_encour_st.Designer.cs">
+      <DependentUpon>bon_commande_encour_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bon_dop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bon_dop.Designer.cs">
+      <DependentUpon>bon_dop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bon_dop_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bon_dop_st.Designer.cs">
+      <DependentUpon>bon_dop_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bsm.Designer.cs">
+      <DependentUpon>bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bsm_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bsm_article.Designer.cs">
+      <DependentUpon>bsm_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bsm_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bsm_equipement.Designer.cs">
+      <DependentUpon>bsm_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bsm_general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bsm_general.Designer.cs">
+      <DependentUpon>bsm_general.cs</DependentUpon>
+    </Compile>
+    <Compile Include="budget_investissement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="budget_investissement.Designer.cs">
+      <DependentUpon>budget_investissement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="caracteristique_autre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="caracteristique_autre.Designer.cs">
+      <DependentUpon>caracteristique_autre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="caractéristique_textbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="caractéristique_textbox.Designer.cs">
+      <DependentUpon>caractéristique_textbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cause_non_realisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cause_non_realisation.Designer.cs">
+      <DependentUpon>cause_non_realisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="centre_charge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="centre_charge.Designer.cs">
+      <DependentUpon>centre_charge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="choisir_fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="choisir_fournisseur.Designer.cs">
+      <DependentUpon>choisir_fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="choisir_sous_traitant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="choisir_sous_traitant.Designer.cs">
+      <DependentUpon>choisir_sous_traitant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classe_intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="classe_intervention.Designer.cs">
+      <DependentUpon>classe_intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classe_ot_notif.cs" />
+    <Compile Include="cloturer_dop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cloturer_dop.Designer.cs">
+      <DependentUpon>cloturer_dop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande.Designer.cs">
+      <DependentUpon>commande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_annule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_annule.Designer.cs">
+      <DependentUpon>commande_annule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_annule_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_annule_st.Designer.cs">
+      <DependentUpon>commande_annule_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_attente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_attente.Designer.cs">
+      <DependentUpon>commande_attente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_attente_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_attente_st.Designer.cs">
+      <DependentUpon>commande_attente_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_cloture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_cloture.Designer.cs">
+      <DependentUpon>commande_cloture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_cloturer_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_cloturer_st.Designer.cs">
+      <DependentUpon>commande_cloturer_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_encour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_encour.Designer.cs">
+      <DependentUpon>commande_encour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_encour_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_encour_st.Designer.cs">
+      <DependentUpon>commande_encour_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_sous_traitant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_sous_traitant.Designer.cs">
+      <DependentUpon>commande_sous_traitant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_vr_prix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_vr_prix.Designer.cs">
+      <DependentUpon>commande_vr_prix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commande_vr_prix_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="commande_vr_prix_st.Designer.cs">
+      <DependentUpon>commande_vr_prix_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compteur.Designer.cs">
+      <DependentUpon>compteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compteur_actuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compteur_actuel.Designer.cs">
+      <DependentUpon>compteur_actuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compteur_historique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compteur_historique.Designer.cs">
+      <DependentUpon>compteur_historique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compteur_laision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compteur_laision.Designer.cs">
+      <DependentUpon>compteur_laision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compteur_variation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compteur_variation.Designer.cs">
+      <DependentUpon>compteur_variation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="copier_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="copier_equipement.Designer.cs">
+      <DependentUpon>copier_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_bl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_bl.Designer.cs">
+      <DependentUpon>creer_bl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_bl_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_bl_st.Designer.cs">
+      <DependentUpon>creer_bl_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_brm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_brm.Designer.cs">
+      <DependentUpon>creer_brm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_bsm.Designer.cs">
+      <DependentUpon>creer_bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_budget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_budget.Designer.cs">
+      <DependentUpon>creer_budget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_commande.Designer.cs">
+      <DependentUpon>creer_commande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_commande_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_commande_st.Designer.cs">
+      <DependentUpon>creer_commande_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_da.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_da.Designer.cs">
+      <DependentUpon>creer_da.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_devis_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_devis_st.Designer.cs">
+      <DependentUpon>creer_devis_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creer_reception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creer_reception.Designer.cs">
+      <DependentUpon>creer_reception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="créer_dop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="créer_dop.Designer.cs">
+      <DependentUpon>créer_dop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da_add_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da_add_equipement.Designer.cs">
+      <DependentUpon>da_add_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da_add_equipement_modifier_encour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da_add_equipement_modifier_encour.Designer.cs">
+      <DependentUpon>da_add_equipement_modifier_encour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da_admin.Designer.cs">
+      <DependentUpon>da_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da_cloturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da_cloturer.Designer.cs">
+      <DependentUpon>da_cloturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da_confirmer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da_confirmer.Designer.cs">
+      <DependentUpon>da_confirmer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da_eyes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da_eyes.Designer.cs">
+      <DependentUpon>da_eyes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da_refuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da_refuser.Designer.cs">
+      <DependentUpon>da_refuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da_reporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da_reporter.Designer.cs">
+      <DependentUpon>da_reporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="demande_achat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="demande_achat.Designer.cs">
+      <DependentUpon>demande_achat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demande_Intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demande_Intervention.Designer.cs">
+      <DependentUpon>Demande_Intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="design.cs" />
+    <Compile Include="devis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="devis.Designer.cs">
+      <DependentUpon>devis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="devis_classement_fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="devis_classement_fournisseur.Designer.cs">
+      <DependentUpon>devis_classement_fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Devis_sous_traitant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devis_sous_traitant.Designer.cs">
+      <DependentUpon>Devis_sous_traitant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DEVMODE1.cs" />
+    <Compile Include="DIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIST.Designer.cs">
+      <DependentUpon>DIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dist_annule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dist_annule.Designer.cs">
+      <DependentUpon>dist_annule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dist_cloture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dist_cloture.Designer.cs">
+      <DependentUpon>dist_cloture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dist_encours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dist_encours.Designer.cs">
+      <DependentUpon>dist_encours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dop_annule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dop_annule.Designer.cs">
+      <DependentUpon>dop_annule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ecran.cs" />
+    <Compile Include="equipement_bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_bsm.Designer.cs">
+      <DependentUpon>equipement_bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipement_bsm_modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_bsm_modifier.Designer.cs">
+      <DependentUpon>equipement_bsm_modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipement_compteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_compteur.Designer.cs">
+      <DependentUpon>equipement_compteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipement_di.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipement_di.Designer.cs">
+      <DependentUpon>Equipement_di.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipement_generale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_generale.Designer.cs">
+      <DependentUpon>equipement_generale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipement_image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_image.Designer.cs">
+      <DependentUpon>equipement_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipement_list_bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_list_bsm.Designer.cs">
+      <DependentUpon>equipement_list_bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipement_observation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_observation.Designer.cs">
+      <DependentUpon>equipement_observation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipement_pdf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_pdf.Designer.cs">
+      <DependentUpon>equipement_pdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipement_prevision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_prevision.Designer.cs">
+      <DependentUpon>equipement_prevision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="equipement_technique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="equipement_technique.Designer.cs">
+      <DependentUpon>equipement_technique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="etat_stock_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="etat_stock_st.Designer.cs">
+      <DependentUpon>etat_stock_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="facture.Designer.cs">
+      <DependentUpon>facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="facture_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="facture_st.Designer.cs">
+      <DependentUpon>facture_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Famille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Famille.Designer.cs">
+      <DependentUpon>Famille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fonction.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fournisseur_adresse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fournisseur_adresse.Designer.cs">
+      <DependentUpon>fournisseur_adresse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fournisseur_banque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fournisseur_banque.Designer.cs">
+      <DependentUpon>fournisseur_banque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fournisseur_contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fournisseur_contact.Designer.cs">
+      <DependentUpon>Fournisseur_contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gamme_fonction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gamme_fonction.Designer.cs">
+      <DependentUpon>gamme_fonction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gamme_general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gamme_general.Designer.cs">
+      <DependentUpon>gamme_general.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gamme_operatoire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gamme_operatoire.Designer.cs">
+      <DependentUpon>gamme_operatoire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gamme_outillage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gamme_outillage.Designer.cs">
+      <DependentUpon>gamme_outillage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gamme_pdr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gamme_pdr.Designer.cs">
+      <DependentUpon>gamme_pdr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historique_brm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historique_brm.Designer.cs">
+      <DependentUpon>historique_brm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historique_bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historique_bsm.Designer.cs">
+      <DependentUpon>historique_bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historique_devis_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historique_devis_st.Designer.cs">
+      <DependentUpon>historique_devis_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historique_dop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historique_dop.Designer.cs">
+      <DependentUpon>historique_dop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historique_tableau_comparatif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historique_tableau_comparatif.Designer.cs">
+      <DependentUpon>historique_tableau_comparatif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HostNodeElement.cs" />
+    <Compile Include="indicateur_maintenance.cs" />
+    <Compile Include="intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="intervention.Designer.cs">
+      <DependentUpon>intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intervention_sous_traitance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="intervention_sous_traitance.Designer.cs">
+      <DependentUpon>intervention_sous_traitance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lancement_ot_preventive.cs" />
+    <Compile Include="liste_activite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_activite.Designer.cs">
+      <DependentUpon>liste_activite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_activité_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_activité_st.Designer.cs">
+      <DependentUpon>liste_activité_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_article.Designer.cs">
+      <DependentUpon>liste_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_article_simple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_article_simple.Designer.cs">
+      <DependentUpon>liste_article_simple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_budget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_budget.Designer.cs">
+      <DependentUpon>liste_budget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_budget_categorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_budget_categorie.Designer.cs">
+      <DependentUpon>liste_budget_categorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_budget_fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_budget_fournisseur.Designer.cs">
+      <DependentUpon>liste_budget_fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_budget_general_tous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_budget_general_tous.Designer.cs">
+      <DependentUpon>liste_budget_general_tous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_budget_modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_budget_modifier.Designer.cs">
+      <DependentUpon>liste_budget_modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_budget_variation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_budget_variation.Designer.cs">
+      <DependentUpon>liste_budget_variation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_da.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_da.Designer.cs">
+      <DependentUpon>liste_da.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_dop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_dop.Designer.cs">
+      <DependentUpon>liste_dop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_facture.Designer.cs">
+      <DependentUpon>liste_facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_fournisseur.Designer.cs">
+      <DependentUpon>liste_fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_gamme_operatoire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_gamme_operatoire.Designer.cs">
+      <DependentUpon>liste_gamme_operatoire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_intervenant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_intervenant.Designer.cs">
+      <DependentUpon>liste_intervenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_mp_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_mp_st.Designer.cs">
+      <DependentUpon>liste_mp_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_outillage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_outillage.Designer.cs">
+      <DependentUpon>liste_outillage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_utilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_utilisateur.Designer.cs">
+      <DependentUpon>liste_utilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="livraison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="livraison.Designer.cs">
+      <DependentUpon>livraison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="livraison_sous_traitant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="livraison_sous_traitant.Designer.cs">
+      <DependentUpon>livraison_sous_traitant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_article.Designer.cs">
+      <DependentUpon>menu_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_brm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_brm.Designer.cs">
+      <DependentUpon>menu_brm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_bsm.Designer.cs">
+      <DependentUpon>menu_bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_commande.Designer.cs">
+      <DependentUpon>menu_commande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_demande_achat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_demande_achat.Designer.cs">
+      <DependentUpon>menu_demande_achat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_devis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_devis.Designer.cs">
+      <DependentUpon>menu_devis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_facture.Designer.cs">
+      <DependentUpon>menu_facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_fournisseur.Designer.cs">
+      <DependentUpon>menu_fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_livraison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_livraison.Designer.cs">
+      <DependentUpon>menu_livraison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_reception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_reception.Designer.cs">
+      <DependentUpon>menu_reception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_article.Designer.cs">
+      <DependentUpon>Modifier_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier_caracteristique_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier_caracteristique_article.Designer.cs">
+      <DependentUpon>modifier_caracteristique_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_caracteristique_autre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_caracteristique_autre.Designer.cs">
+      <DependentUpon>Modifier_caracteristique_autre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier_caracteristique_textbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier_caracteristique_textbox.Designer.cs">
+      <DependentUpon>modifier_caracteristique_textbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier_da_refuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier_da_refuser.Designer.cs">
+      <DependentUpon>modifier_da_refuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier_devis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier_devis.Designer.cs">
+      <DependentUpon>modifier_devis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier_devis_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier_devis_st.Designer.cs">
+      <DependentUpon>modifier_devis_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier_equipement.Designer.cs">
+      <DependentUpon>modifier_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier_fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier_fournisseur.Designer.cs">
+      <DependentUpon>modifier_fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier_un_da.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier_un_da.Designer.cs">
+      <DependentUpon>modifier_un_da.cs</DependentUpon>
+    </Compile>
+    <Compile Include="multicombobox_extend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="multicombobox_extend.Designer.cs">
+      <DependentUpon>multicombobox_extend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="multi_cmb_prop.cs" />
+    <Compile Include="mvt_stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mvt_stock.Designer.cs">
+      <DependentUpon>mvt_stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mvt_stock_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mvt_stock_st.Designer.cs">
+      <DependentUpon>mvt_stock_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notification.Designer.cs">
+      <DependentUpon>notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="open_pdf_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="open_pdf_equipement.Designer.cs">
+      <DependentUpon>open_pdf_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ordre_travail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ordre_travail.Designer.cs">
+      <DependentUpon>ordre_travail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_agenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_agenda.Designer.cs">
+      <DependentUpon>ot_agenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_agenda_employe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_agenda_employe.Designer.cs">
+      <DependentUpon>ot_agenda_employe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_agenda_travaux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_agenda_travaux.Designer.cs">
+      <DependentUpon>ot_agenda_travaux.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_analyse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_analyse.Designer.cs">
+      <DependentUpon>ot_analyse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_analyse_amdec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_analyse_amdec.Designer.cs">
+      <DependentUpon>ot_analyse_amdec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_analyse_ishikawa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_analyse_ishikawa.Designer.cs">
+      <DependentUpon>ot_analyse_ishikawa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_analyse_pareto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_analyse_pareto.Designer.cs">
+      <DependentUpon>ot_analyse_pareto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_bt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_bt.Designer.cs">
+      <DependentUpon>ot_bt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_bt_bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_bt_bsm.Designer.cs">
+      <DependentUpon>ot_bt_bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_bt_cout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_bt_cout.Designer.cs">
+      <DependentUpon>ot_bt_cout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_bt_cout_mo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_bt_cout_mo.Designer.cs">
+      <DependentUpon>ot_bt_cout_mo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_bt_cout_total.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_bt_cout_total.Designer.cs">
+      <DependentUpon>ot_bt_cout_total.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_bt_intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_bt_intervention.Designer.cs">
+      <DependentUpon>ot_bt_intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_bt_outil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_bt_outil.Designer.cs">
+      <DependentUpon>ot_bt_outil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_bt_projet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_bt_projet.Designer.cs">
+      <DependentUpon>ot_bt_projet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_bt_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_bt_st.Designer.cs">
+      <DependentUpon>ot_bt_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_checklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_checklist.Designer.cs">
+      <DependentUpon>ot_checklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_diagnostic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_diagnostic.Designer.cs">
+      <DependentUpon>ot_diagnostic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_diagnostic_arbre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_diagnostic_arbre.Designer.cs">
+      <DependentUpon>ot_diagnostic_arbre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_diagnostic_final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_diagnostic_final.Designer.cs">
+      <DependentUpon>ot_diagnostic_final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_diagnostic_ishikawa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_diagnostic_ishikawa.Designer.cs">
+      <DependentUpon>ot_diagnostic_ishikawa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_diagnostic_saisie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_diagnostic_saisie.Designer.cs">
+      <DependentUpon>ot_diagnostic_saisie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_general.Designer.cs">
+      <DependentUpon>ot_general.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_general_bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_general_bsm.Designer.cs">
+      <DependentUpon>ot_general_bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_general_cause.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_general_cause.Designer.cs">
+      <DependentUpon>ot_general_cause.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_general_commentaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_general_commentaire.Designer.cs">
+      <DependentUpon>ot_general_commentaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_general_defaillance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_general_defaillance.Designer.cs">
+      <DependentUpon>ot_general_defaillance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_general_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_general_detail.Designer.cs">
+      <DependentUpon>ot_general_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_general_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_general_equipement.Designer.cs">
+      <DependentUpon>ot_general_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_general_gamme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_general_gamme.Designer.cs">
+      <DependentUpon>ot_general_gamme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_general_intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_general_intervention.Designer.cs">
+      <DependentUpon>ot_general_intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_kpi_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_kpi_equipement.Designer.cs">
+      <DependentUpon>ot_kpi_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_kpi_sous_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_kpi_sous_equipement.Designer.cs">
+      <DependentUpon>ot_kpi_sous_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_kpi_tous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_kpi_tous.Designer.cs">
+      <DependentUpon>ot_kpi_tous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_kpi_zone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_kpi_zone.Designer.cs">
+      <DependentUpon>ot_kpi_zone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_liste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_liste.Designer.cs">
+      <DependentUpon>ot_liste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_liste_article_reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_liste_article_reservation.Designer.cs">
+      <DependentUpon>ot_liste_article_reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_ordonnacement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_ordonnacement.Designer.cs">
+      <DependentUpon>ot_ordonnacement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_ordonnacement_gantt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_ordonnacement_gantt.Designer.cs">
+      <DependentUpon>ot_ordonnacement_gantt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_ordonnancement_employe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_ordonnancement_employe.Designer.cs">
+      <DependentUpon>ot_ordonnancement_employe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_ordonnancement_intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_ordonnancement_intervention.Designer.cs">
+      <DependentUpon>ot_ordonnancement_intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_pareto_cout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_pareto_cout.Designer.cs">
+      <DependentUpon>ot_pareto_cout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_pareto_fiabilité.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_pareto_fiabilité.Designer.cs">
+      <DependentUpon>ot_pareto_fiabilité.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_rapport_checklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_rapport_checklist.Designer.cs">
+      <DependentUpon>ot_rapport_checklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_ressources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_ressources.Designer.cs">
+      <DependentUpon>ot_ressources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_ressources_fonction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_ressources_fonction.Designer.cs">
+      <DependentUpon>ot_ressources_fonction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_ressources_outillage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_ressources_outillage.Designer.cs">
+      <DependentUpon>ot_ressources_outillage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_ressources_pdr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_ressources_pdr.Designer.cs">
+      <DependentUpon>ot_ressources_pdr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tableau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tableau.Designer.cs">
+      <DependentUpon>ot_tableau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tabl_bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tabl_bsm.Designer.cs">
+      <DependentUpon>ot_tabl_bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tabl_externe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tabl_externe.Designer.cs">
+      <DependentUpon>ot_tabl_externe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tabl_intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tabl_intervention.Designer.cs">
+      <DependentUpon>ot_tabl_intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tabl_outillage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tabl_outillage.Designer.cs">
+      <DependentUpon>ot_tabl_outillage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tabl_projet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tabl_projet.Designer.cs">
+      <DependentUpon>ot_tabl_projet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tabl_reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tabl_reservation.Designer.cs">
+      <DependentUpon>ot_tabl_reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb.Designer.cs">
+      <DependentUpon>ot_tb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_corrective.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_corrective.Designer.cs">
+      <DependentUpon>ot_tb_corrective.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_cout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_cout.Designer.cs">
+      <DependentUpon>ot_tb_cout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_cout_mo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_cout_mo.Designer.cs">
+      <DependentUpon>ot_tb_cout_mo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_cout_total.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_cout_total.Designer.cs">
+      <DependentUpon>ot_tb_cout_total.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_general.Designer.cs">
+      <DependentUpon>ot_tb_general.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_kpi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_kpi.Designer.cs">
+      <DependentUpon>ot_tb_kpi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_realisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_realisation.Designer.cs">
+      <DependentUpon>ot_tb_realisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_realisation_cause.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_realisation_cause.Designer.cs">
+      <DependentUpon>ot_tb_realisation_cause.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_realisation_ot_retard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_realisation_ot_retard.Designer.cs">
+      <DependentUpon>ot_tb_realisation_ot_retard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ot_tb_type_maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ot_tb_type_maintenance.Designer.cs">
+      <DependentUpon>ot_tb_type_maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outillage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outillage.Designer.cs">
+      <DependentUpon>Outillage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outillage_date_heure_fin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outillage_date_heure_fin.Designer.cs">
+      <DependentUpon>outillage_date_heure_fin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outillage_parametre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outillage_parametre.Designer.cs">
+      <DependentUpon>outillage_parametre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outillage_parametre_secteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outillage_parametre_secteur.Designer.cs">
+      <DependentUpon>outillage_parametre_secteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outillage_parametre_type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outillage_parametre_type.Designer.cs">
+      <DependentUpon>outillage_parametre_type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outillage_parametre_utilisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outillage_parametre_utilisation.Designer.cs">
+      <DependentUpon>outillage_parametre_utilisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outillage_utilisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outillage_utilisation.Designer.cs">
+      <DependentUpon>Outillage_utilisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outillage_utilisation_historique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outillage_utilisation_historique.Designer.cs">
+      <DependentUpon>outillage_utilisation_historique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outillage_utilisation_lancement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outillage_utilisation_lancement.Designer.cs">
+      <DependentUpon>Outillage_utilisation_lancement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page_codification_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page_codification_equipement.Designer.cs">
+      <DependentUpon>page_codification_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page_loginn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page_loginn.Designer.cs">
+      <DependentUpon>page_loginn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametrage_anomalie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametrage_anomalie.Designer.cs">
+      <DependentUpon>parametrage_anomalie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametrage_corrective.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametrage_corrective.Designer.cs">
+      <DependentUpon>parametrage_corrective.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametrage_diagnostic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametrage_diagnostic.Designer.cs">
+      <DependentUpon>parametrage_diagnostic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametrage_intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametrage_intervention.Designer.cs">
+      <DependentUpon>parametrage_intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametrage_production.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametrage_production.Designer.cs">
+      <DependentUpon>parametrage_production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_article_classification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_article_classification.Designer.cs">
+      <DependentUpon>parametre_article_classification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_article_localisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_article_localisation.Designer.cs">
+      <DependentUpon>parametre_article_localisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_article_stockage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_article_stockage.Designer.cs">
+      <DependentUpon>parametre_article_stockage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_article_unite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_article_unite.Designer.cs">
+      <DependentUpon>parametre_article_unite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_fournisseur_activite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_fournisseur_activite.Designer.cs">
+      <DependentUpon>parametre_fournisseur_activite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_fournisseur_compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_fournisseur_compte.Designer.cs">
+      <DependentUpon>parametre_fournisseur_compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_fournisseur_devise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_fournisseur_devise.Designer.cs">
+      <DependentUpon>parametre_fournisseur_devise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_fournisseur_livraison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_fournisseur_livraison.Designer.cs">
+      <DependentUpon>parametre_fournisseur_livraison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_fournisseur_reglement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_fournisseur_reglement.Designer.cs">
+      <DependentUpon>parametre_fournisseur_reglement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametre_photo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametre_photo.Designer.cs">
+      <DependentUpon>parametre_photo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="param_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="param_article.Designer.cs">
+      <DependentUpon>param_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="param_fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="param_fournisseur.Designer.cs">
+      <DependentUpon>param_fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_cout_classe_intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_cout_classe_intervention.Designer.cs">
+      <DependentUpon>pareto_cout_classe_intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_cout_defaillance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_cout_defaillance.Designer.cs">
+      <DependentUpon>pareto_cout_defaillance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_cout_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_cout_equipement.Designer.cs">
+      <DependentUpon>pareto_cout_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_cout_famille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_cout_famille.Designer.cs">
+      <DependentUpon>pareto_cout_famille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_cout_fonction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_cout_fonction.Designer.cs">
+      <DependentUpon>pareto_cout_fonction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_cout_intervenant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_cout_intervenant.Designer.cs">
+      <DependentUpon>pareto_cout_intervenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_cout_sous_famille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_cout_sous_famille.Designer.cs">
+      <DependentUpon>pareto_cout_sous_famille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_fiabilite_classe_intervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_fiabilite_classe_intervention.Designer.cs">
+      <DependentUpon>pareto_fiabilite_classe_intervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_fiabilite_defaillance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_fiabilite_defaillance.Designer.cs">
+      <DependentUpon>pareto_fiabilite_defaillance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_fiabilite_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_fiabilite_equipement.Designer.cs">
+      <DependentUpon>pareto_fiabilite_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_fiabilite_organe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_fiabilite_organe.Designer.cs">
+      <DependentUpon>pareto_fiabilite_organe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_fiabilite_sous_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_fiabilite_sous_equipement.Designer.cs">
+      <DependentUpon>pareto_fiabilite_sous_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pareto_fiabilite_zone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pareto_fiabilite_zone.Designer.cs">
+      <DependentUpon>pareto_fiabilite_zone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pdr_cout_famille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pdr_cout_famille.Designer.cs">
+      <DependentUpon>pdr_cout_famille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plan_maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plan_maintenance.Designer.cs">
+      <DependentUpon>plan_maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="preventive_conditionnelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="preventive_conditionnelle.Designer.cs">
+      <DependentUpon>preventive_conditionnelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="preventive_systematique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="preventive_systematique.Designer.cs">
+      <DependentUpon>preventive_systematique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="preventive_syst_compteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="preventive_syst_compteur.Designer.cs">
+      <DependentUpon>preventive_syst_compteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_param_anomalie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_param_anomalie.Designer.cs">
+      <DependentUpon>prod_param_anomalie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_param_brique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_param_brique.Designer.cs">
+      <DependentUpon>prod_param_brique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_param_compteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_param_compteur.Designer.cs">
+      <DependentUpon>prod_param_compteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_param_compteur_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_param_compteur_1.Designer.cs">
+      <DependentUpon>prod_param_compteur_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_param_equipement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_param_equipement.Designer.cs">
+      <DependentUpon>prod_param_equipement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_param_mesure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_param_mesure.Designer.cs">
+      <DependentUpon>prod_param_mesure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_param_saisie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_param_saisie.Designer.cs">
+      <DependentUpon>prod_param_saisie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_param_saisie1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_param_saisie1.Designer.cs">
+      <DependentUpon>prod_param_saisie1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport.Designer.cs">
+      <DependentUpon>prod_rapport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_anomalie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_anomalie.Designer.cs">
+      <DependentUpon>prod_rapport_anomalie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_as.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_as.Designer.cs">
+      <DependentUpon>prod_rapport_as.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_detail.Designer.cs">
+      <DependentUpon>prod_rapport_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication.Designer.cs">
+      <DependentUpon>prod_rapport_fabrication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_cf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_cf.Designer.cs">
+      <DependentUpon>prod_rapport_fabrication_cf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_detail.Designer.cs">
+      <DependentUpon>prod_rapport_fabrication_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_entre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_entre.Designer.cs">
+      <DependentUpon>prod_rapport_fabrication_entre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_horaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_horaire.Designer.cs">
+      <DependentUpon>prod_rapport_fabrication_horaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_produit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_fabrication_produit.Designer.cs">
+      <DependentUpon>prod_rapport_fabrication_produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_four.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_four.Designer.cs">
+      <DependentUpon>prod_rapport_four.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_four_champ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_four_champ.Designer.cs">
+      <DependentUpon>prod_rapport_four_champ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_four_sortie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_four_sortie.Designer.cs">
+      <DependentUpon>prod_rapport_four_sortie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_fuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_fuel.Designer.cs">
+      <DependentUpon>prod_rapport_fuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_preparation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_preparation.Designer.cs">
+      <DependentUpon>prod_rapport_preparation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_rapport_prep_general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_rapport_prep_general.Designer.cs">
+      <DependentUpon>prod_rapport_prep_general.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prod_recap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_recap.Designer.cs">
+      <DependentUpon>prod_recap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RadForm_test.cs" />
+    <Compile Include="rapport_fiche_diagnostic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rapport_fiche_diagnostic.Designer.cs">
+      <DependentUpon>rapport_fiche_diagnostic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reception.Designer.cs">
+      <DependentUpon>reception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reception_historique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reception_historique.Designer.cs">
+      <DependentUpon>reception_historique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="refuser_un_da.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="refuser_un_da.Designer.cs">
+      <DependentUpon>refuser_un_da.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporter_un_da.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporter_un_da.Designer.cs">
+      <DependentUpon>reporter_un_da.cs</DependentUpon>
+    </Compile>
+    <Compile Include="retour_magasin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retour_magasin.Designer.cs">
+      <DependentUpon>retour_magasin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signature.Designer.cs">
+      <DependentUpon>signature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signature_commande_attente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signature_commande_attente.Designer.cs">
+      <DependentUpon>signature_commande_attente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signature_commande_attente_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signature_commande_attente_st.Designer.cs">
+      <DependentUpon>signature_commande_attente_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sous_Famille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sous_Famille.Designer.cs">
+      <DependentUpon>Sous_Famille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock_magasin_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_magasin_st.Designer.cs">
+      <DependentUpon>stock_magasin_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock_reparation_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_reparation_st.Designer.cs">
+      <DependentUpon>stock_reparation_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock_sous_traitance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_sous_traitance.Designer.cs">
+      <DependentUpon>stock_sous_traitance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock_usine_st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_usine_st.Designer.cs">
+      <DependentUpon>stock_usine_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="st_matiere_pr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="st_matiere_pr.Designer.cs">
+      <DependentUpon>st_matiere_pr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="symptome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="symptome.Designer.cs">
+      <DependentUpon>symptome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tableau_comparatif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tableau_comparatif.Designer.cs">
+      <DependentUpon>tableau_comparatif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tb_achat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tb_achat.Designer.cs">
+      <DependentUpon>tb_achat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tb_achat_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tb_achat_article.Designer.cs">
+      <DependentUpon>tb_achat_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tb_bsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tb_bsm.Designer.cs">
+      <DependentUpon>tb_bsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tb_flux_achat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tb_flux_achat.Designer.cs">
+      <DependentUpon>tb_flux_achat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tb_variation_prix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tb_variation_prix.Designer.cs">
+      <DependentUpon>tb_variation_prix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tb_variation_prix_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tb_variation_prix_article.Designer.cs">
+      <DependentUpon>tb_variation_prix_article.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tb_variation_prix_article_vr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tb_variation_prix_article_vr.Designer.cs">
+      <DependentUpon>tb_variation_prix_article_vr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tb_variation_prix_recap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tb_variation_prix_recap.Designer.cs">
+      <DependentUpon>tb_variation_prix_recap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test_rad.cs" />
+    <Compile Include="update_tableau.cs" />
+    <Compile Include="User_32.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="acceuil_maintenance.resources" />
+    <EmbeddedResource Include="acceuil_stock_liste_article.resources" />
+    <EmbeddedResource Include="accueil.resources" />
+    <EmbeddedResource Include="achat_sous_traitance.resources" />
+    <EmbeddedResource Include="action.resources" />
+    <EmbeddedResource Include="action_ajouter.resources" />
+    <EmbeddedResource Include="activite_sous_traitance.resources" />
+    <EmbeddedResource Include="ajouter_article.resources" />
+    <EmbeddedResource Include="ajouter_caractéristique.resources" />
+    <EmbeddedResource Include="ajouter_devis.resources" />
+    <EmbeddedResource Include="ajouter_devis_st.resources" />
+    <EmbeddedResource Include="ajouter_equipement.resources" />
+    <EmbeddedResource Include="ajouter_fonction_intervenant.resources" />
+    <EmbeddedResource Include="ajouter_fournisseur.resources" />
+    <EmbeddedResource Include="Ajouter_Gamme_Opératoire.resources" />
+    <EmbeddedResource Include="Ajouter_intervenant.resources" />
+    <EmbeddedResource Include="ajouter_moteur.resources" />
+    <EmbeddedResource Include="ajouter_utilisateur.resources" />
+    <EmbeddedResource Include="approvisionnement.resources" />
+    <EmbeddedResource Include="app_gerer_planning.resources" />
+    <EmbeddedResource Include="app_planifier_da_reapp.resources" />
+    <EmbeddedResource Include="app_planifier_da_recomp.resources" />
+    <EmbeddedResource Include="app_point_commande.resources" />
+    <EmbeddedResource Include="app_reapprovisionnement.resources" />
+    <EmbeddedResource Include="app_recompletement.resources" />
+    <EmbeddedResource Include="arbre_defaillance.resources" />
+    <EmbeddedResource Include="Arbre_Equipement.resources" />
+    <EmbeddedResource Include="articles.resources" />
+    <EmbeddedResource Include="article_caracteristique.resources" />
+    <EmbeddedResource Include="article_commentaire.resources" />
+    <EmbeddedResource Include="article_equipement.resources" />
+    <EmbeddedResource Include="article_fichier.resources" />
+    <EmbeddedResource Include="article_generale.resources" />
+    <EmbeddedResource Include="article_image.resources" />
+    <EmbeddedResource Include="article_parametre.resources" />
+    <EmbeddedResource Include="article_stock.resources" />
+    <EmbeddedResource Include="associer_fournisseur_dop.resources" />
+    <EmbeddedResource Include="bl_facture.resources" />
+    <EmbeddedResource Include="bl_facture_st.resources" />
+    <EmbeddedResource Include="bl_non_facture.resources" />
+    <EmbeddedResource Include="bl_non_facture_st.resources" />
+    <EmbeddedResource Include="bon_commande_encour.resources" />
+    <EmbeddedResource Include="bon_commande_encour_st.resources" />
+    <EmbeddedResource Include="bon_dop.resources" />
+    <EmbeddedResource Include="bon_dop_st.resources" />
+    <EmbeddedResource Include="bsm.resources" />
+    <EmbeddedResource Include="bsm_article.resources" />
+    <EmbeddedResource Include="bsm_equipement.resources" />
+    <EmbeddedResource Include="bsm_general.resources" />
+    <EmbeddedResource Include="budget_investissement.resources" />
+    <EmbeddedResource Include="caracteristique_autre.resources" />
+    <EmbeddedResource Include="caractéristique_textbox.resources" />
+    <EmbeddedResource Include="cause_non_realisation.resources" />
+    <EmbeddedResource Include="centre_charge.resources" />
+    <EmbeddedResource Include="choisir_fournisseur.resources" />
+    <EmbeddedResource Include="choisir_sous_traitant.resources" />
+    <EmbeddedResource Include="classe_intervention.resources" />
+    <EmbeddedResource Include="cloturer_dop.resources" />
+    <EmbeddedResource Include="commande.resources" />
+    <EmbeddedResource Include="commande_annule.resources" />
+    <EmbeddedResource Include="commande_annule_st.resources" />
+    <EmbeddedResource Include="commande_attente.resources" />
+    <EmbeddedResource Include="commande_attente_st.resources" />
+    <EmbeddedResource Include="commande_cloture.resources" />
+    <EmbeddedResource Include="commande_cloturer_st.resources" />
+    <EmbeddedResource Include="commande_encour.resources" />
+    <EmbeddedResource Include="commande_encour_st.resources" />
+    <EmbeddedResource Include="commande_sous_traitant.resources" />
+    <EmbeddedResource Include="commande_vr_prix.resources" />
+    <EmbeddedResource Include="commande_vr_prix_st.resources" />
+    <EmbeddedResource Include="compteur.resources" />
+    <EmbeddedResource Include="compteur_actuel.resources" />
+    <EmbeddedResource Include="compteur_historique.resources" />
+    <EmbeddedResource Include="compteur_laision.resources" />
+    <EmbeddedResource Include="compteur_variation.resources" />
+    <EmbeddedResource Include="copier_equipement.resources" />
+    <EmbeddedResource Include="creer_bl.resources" />
+    <EmbeddedResource Include="creer_bl_st.resources" />
+    <EmbeddedResource Include="creer_brm.resources" />
+    <EmbeddedResource Include="creer_bsm.resources" />
+    <EmbeddedResource Include="creer_budget.resources" />
+    <EmbeddedResource Include="creer_commande.resources" />
+    <EmbeddedResource Include="creer_commande_st.resources" />
+    <EmbeddedResource Include="creer_da.resources" />
+    <EmbeddedResource Include="creer_devis_st.resources" />
+    <EmbeddedResource Include="creer_reception.resources" />
+    <EmbeddedResource Include="créer_dop.resources" />
+    <EmbeddedResource Include="da_add_equipement.resources" />
+    <EmbeddedResource Include="da_add_equipement_modifier_encour.resources" />
+    <EmbeddedResource Include="da_admin.resources" />
+    <EmbeddedResource Include="da_cloturer.resources" />
+    <EmbeddedResource Include="da_confirmer.resources" />
+    <EmbeddedResource Include="da_eyes.resources" />
+    <EmbeddedResource Include="da_refuser.resources" />
+    <EmbeddedResource Include="da_reporter.resources" />
+    <EmbeddedResource Include="demande_achat.resources" />
+    <EmbeddedResource Include="Demande_Intervention.resources" />
+    <EmbeddedResource Include="devis.resources" />
+    <EmbeddedResource Include="devis_classement_fournisseur.resources" />
+    <EmbeddedResource Include="Devis_sous_traitant.resources" />
+    <EmbeddedResource Include="DIST.resources" />
+    <EmbeddedResource Include="dist_annule.resources" />
+    <EmbeddedResource Include="dist_cloture.resources" />
+    <EmbeddedResource Include="dist_encours.resources" />
+    <EmbeddedResource Include="dop_annule.resources" />
+    <EmbeddedResource Include="equipement_bsm.resources" />
+    <EmbeddedResource Include="equipement_bsm_modifier.resources" />
+    <EmbeddedResource Include="equipement_compteur.resources" />
+    <EmbeddedResource Include="Equipement_di.resources" />
+    <EmbeddedResource Include="equipement_generale.resources" />
+    <EmbeddedResource Include="equipement_image.resources" />
+    <EmbeddedResource Include="equipement_list_bsm.resources" />
+    <EmbeddedResource Include="equipement_observation.resources" />
+    <EmbeddedResource Include="equipement_pdf.resources" />
+    <EmbeddedResource Include="equipement_prevision.resources" />
+    <EmbeddedResource Include="equipement_technique.resources" />
+    <EmbeddedResource Include="etat_stock_st.resources" />
+    <EmbeddedResource Include="exe.licenses" />
+    <EmbeddedResource Include="facture.resources" />
+    <EmbeddedResource Include="facture_st.resources" />
+    <EmbeddedResource Include="Famille.resources" />
+    <EmbeddedResource Include="Form1.resources" />
+    <EmbeddedResource Include="fournisseur_adresse.resources" />
+    <EmbeddedResource Include="fournisseur_banque.resources" />
+    <EmbeddedResource Include="Fournisseur_contact.resources" />
+    <EmbeddedResource Include="gamme_fonction.resources" />
+    <EmbeddedResource Include="gamme_general.resources" />
+    <EmbeddedResource Include="gamme_operatoire.resources" />
+    <EmbeddedResource Include="gamme_outillage.resources" />
+    <EmbeddedResource Include="gamme_pdr.resources" />
+    <EmbeddedResource Include="historique_brm.resources" />
+    <EmbeddedResource Include="historique_bsm.resources" />
+    <EmbeddedResource Include="historique_devis_st.resources" />
+    <EmbeddedResource Include="historique_dop.resources" />
+    <EmbeddedResource Include="historique_tableau_comparatif.resources" />
+    <EmbeddedResource Include="intervention.resources" />
+    <EmbeddedResource Include="intervention_sous_traitance.resources" />
+    <EmbeddedResource Include="liste_activite.resources" />
+    <EmbeddedResource Include="liste_activité_st.resources" />
+    <EmbeddedResource Include="liste_article.resources" />
+    <EmbeddedResource Include="liste_article_simple.resources" />
+    <EmbeddedResource Include="liste_budget.resources" />
+    <EmbeddedResource Include="liste_budget_categorie.resources" />
+    <EmbeddedResource Include="liste_budget_fournisseur.resources" />
+    <EmbeddedResource Include="liste_budget_general_tous.resources" />
+    <EmbeddedResource Include="liste_budget_modifier.resources" />
+    <EmbeddedResource Include="liste_budget_variation.resources" />
+    <EmbeddedResource Include="liste_da.resources" />
+    <EmbeddedResource Include="liste_dop.resources" />
+    <EmbeddedResource Include="liste_facture.resources" />
+    <EmbeddedResource Include="liste_fournisseur.resources" />
+    <EmbeddedResource Include="liste_gamme_operatoire.resources" />
+    <EmbeddedResource Include="liste_intervenant.resources" />
+    <EmbeddedResource Include="liste_mp_st.resources" />
+    <EmbeddedResource Include="liste_outillage.resources" />
+    <EmbeddedResource Include="liste_utilisateur.resources" />
+    <EmbeddedResource Include="livraison.resources" />
+    <EmbeddedResource Include="livraison_sous_traitant.resources" />
+    <EmbeddedResource Include="menu_article.resources" />
+    <EmbeddedResource Include="menu_brm.resources" />
+    <EmbeddedResource Include="menu_bsm.resources" />
+    <EmbeddedResource Include="menu_commande.resources" />
+    <EmbeddedResource Include="menu_demande_achat.resources" />
+    <EmbeddedResource Include="menu_devis.resources" />
+    <EmbeddedResource Include="menu_facture.resources" />
+    <EmbeddedResource Include="menu_fournisseur.resources" />
+    <EmbeddedResource Include="menu_livraison.resources" />
+    <EmbeddedResource Include="menu_reception.resources" />
+    <EmbeddedResource Include="Modifier_article.resources" />
+    <EmbeddedResource Include="modifier_caracteristique_article.resources" />
+    <EmbeddedResource Include="Modifier_caracteristique_autre.resources" />
+    <EmbeddedResource Include="modifier_caracteristique_textbox.resources" />
+    <EmbeddedResource Include="modifier_da_refuser.resources" />
+    <EmbeddedResource Include="modifier_devis.resources" />
+    <EmbeddedResource Include="modifier_devis_st.resources" />
+    <EmbeddedResource Include="modifier_equipement.resources" />
+    <EmbeddedResource Include="modifier_fournisseur.resources" />
+    <EmbeddedResource Include="modifier_un_da.resources" />
+    <EmbeddedResource Include="mvt_stock.resources" />
+    <EmbeddedResource Include="mvt_stock_st.resources" />
+    <EmbeddedResource Include="notification.resources" />
+    <EmbeddedResource Include="open_pdf_equipement.resources" />
+    <EmbeddedResource Include="ordre_travail.resources" />
+    <EmbeddedResource Include="ot_agenda.resources" />
+    <EmbeddedResource Include="ot_agenda_employe.resources" />
+    <EmbeddedResource Include="ot_agenda_travaux.resources" />
+    <EmbeddedResource Include="ot_analyse.resources" />
+    <EmbeddedResource Include="ot_analyse_amdec.resources" />
+    <EmbeddedResource Include="ot_analyse_ishikawa.resources" />
+    <EmbeddedResource Include="ot_analyse_pareto.resources" />
+    <EmbeddedResource Include="ot_bt.resources" />
+    <EmbeddedResource Include="ot_bt_bsm.resources" />
+    <EmbeddedResource Include="ot_bt_cout.resources" />
+    <EmbeddedResource Include="ot_bt_cout_mo.resources" />
+    <EmbeddedResource Include="ot_bt_cout_total.resources" />
+    <EmbeddedResource Include="ot_bt_intervention.resources" />
+    <EmbeddedResource Include="ot_bt_outil.resources" />
+    <EmbeddedResource Include="ot_bt_projet.resources" />
+    <EmbeddedResource Include="ot_bt_st.resources" />
+    <EmbeddedResource Include="ot_checklist.resources" />
+    <EmbeddedResource Include="ot_diagnostic.resources" />
+    <EmbeddedResource Include="ot_diagnostic_arbre.resources" />
+    <EmbeddedResource Include="ot_diagnostic_final.resources" />
+    <EmbeddedResource Include="ot_diagnostic_ishikawa.resources" />
+    <EmbeddedResource Include="ot_diagnostic_saisie.resources" />
+    <EmbeddedResource Include="ot_general.resources" />
+    <EmbeddedResource Include="ot_general_bsm.resources" />
+    <EmbeddedResource Include="ot_general_cause.resources" />
+    <EmbeddedResource Include="ot_general_commentaire.resources" />
+    <EmbeddedResource Include="ot_general_defaillance.resources" />
+    <EmbeddedResource Include="ot_general_detail.resources" />
+    <EmbeddedResource Include="ot_general_equipement.resources" />
+    <EmbeddedResource Include="ot_general_gamme.resources" />
+    <EmbeddedResource Include="ot_general_intervention.resources" />
+    <EmbeddedResource Include="ot_kpi_equipement.resources" />
+    <EmbeddedResource Include="ot_kpi_sous_equipement.resources" />
+    <EmbeddedResource Include="ot_kpi_tous.resources" />
+    <EmbeddedResource Include="ot_kpi_zone.resources" />
+    <EmbeddedResource Include="ot_liste.resources" />
+    <EmbeddedResource Include="ot_liste_article_reservation.resources" />
+    <EmbeddedResource Include="ot_ordonnacement.resources" />
+    <EmbeddedResource Include="ot_ordonnacement_gantt.resources" />
+    <EmbeddedResource Include="ot_ordonnancement_employe.resources" />
+    <EmbeddedResource Include="ot_ordonnancement_intervention.resources" />
+    <EmbeddedResource Include="ot_pareto_cout.resources" />
+    <EmbeddedResource Include="ot_pareto_fiabilité.resources" />
+    <EmbeddedResource Include="ot_rapport_checklist.resources" />
+    <EmbeddedResource Include="ot_ressources.resources" />
+    <EmbeddedResource Include="ot_ressources_fonction.resources" />
+    <EmbeddedResource Include="ot_ressources_outillage.resources" />
+    <EmbeddedResource Include="ot_ressources_pdr.resources" />
+    <EmbeddedResource Include="ot_tableau.resources" />
+    <EmbeddedResource Include="ot_tabl_bsm.resources" />
+    <EmbeddedResource Include="ot_tabl_externe.resources" />
+    <EmbeddedResource Include="ot_tabl_intervention.resources" />
+    <EmbeddedResource Include="ot_tabl_outillage.resources" />
+    <EmbeddedResource Include="ot_tabl_projet.resources" />
+    <EmbeddedResource Include="ot_tabl_reservation.resources" />
+    <EmbeddedResource Include="ot_tb.resources" />
+    <EmbeddedResource Include="ot_tb_corrective.resources" />
+    <EmbeddedResource Include="ot_tb_cout.resources" />
+    <EmbeddedResource Include="ot_tb_cout_mo.resources" />
+    <EmbeddedResource Include="ot_tb_cout_total.resources" />
+    <EmbeddedResource Include="ot_tb_general.resources" />
+    <EmbeddedResource Include="ot_tb_kpi.resources" />
+    <EmbeddedResource Include="ot_tb_realisation.resources" />
+    <EmbeddedResource Include="ot_tb_realisation_cause.resources" />
+    <EmbeddedResource Include="ot_tb_realisation_ot_retard.resources" />
+    <EmbeddedResource Include="ot_tb_type_maintenance.resources" />
+    <EmbeddedResource Include="Outillage.resources" />
+    <EmbeddedResource Include="outillage_date_heure_fin.resources" />
+    <EmbeddedResource Include="outillage_parametre.resources" />
+    <EmbeddedResource Include="outillage_parametre_secteur.resources" />
+    <EmbeddedResource Include="outillage_parametre_type.resources" />
+    <EmbeddedResource Include="outillage_parametre_utilisation.resources" />
+    <EmbeddedResource Include="Outillage_utilisation.resources" />
+    <EmbeddedResource Include="outillage_utilisation_historique.resources" />
+    <EmbeddedResource Include="Outillage_utilisation_lancement.resources" />
+    <EmbeddedResource Include="page_codification_equipement.resources" />
+    <EmbeddedResource Include="page_loginn.resources" />
+    <EmbeddedResource Include="parametrage_anomalie.resources" />
+    <EmbeddedResource Include="parametrage_corrective.resources" />
+    <EmbeddedResource Include="parametrage_diagnostic.resources" />
+    <EmbeddedResource Include="parametrage_intervention.resources" />
+    <EmbeddedResource Include="parametrage_production.resources" />
+    <EmbeddedResource Include="parametre_article_classification.resources" />
+    <EmbeddedResource Include="parametre_article_localisation.resources" />
+    <EmbeddedResource Include="parametre_article_stockage.resources" />
+    <EmbeddedResource Include="parametre_article_unite.resources" />
+    <EmbeddedResource Include="parametre_fournisseur_activite.resources" />
+    <EmbeddedResource Include="parametre_fournisseur_compte.resources" />
+    <EmbeddedResource Include="parametre_fournisseur_devise.resources" />
+    <EmbeddedResource Include="parametre_fournisseur_livraison.resources" />
+    <EmbeddedResource Include="parametre_fournisseur_reglement.resources" />
+    <EmbeddedResource Include="parametre_photo.resources" />
+    <EmbeddedResource Include="param_article.resources" />
+    <EmbeddedResource Include="param_fournisseur.resources" />
+    <EmbeddedResource Include="pareto_cout_classe_intervention.resources" />
+    <EmbeddedResource Include="pareto_cout_defaillance.resources" />
+    <EmbeddedResource Include="pareto_cout_equipement.resources" />
+    <EmbeddedResource Include="pareto_cout_famille.resources" />
+    <EmbeddedResource Include="pareto_cout_fonction.resources" />
+    <EmbeddedResource Include="pareto_cout_intervenant.resources" />
+    <EmbeddedResource Include="pareto_cout_sous_famille.resources" />
+    <EmbeddedResource Include="pareto_fiabilite_classe_intervention.resources" />
+    <EmbeddedResource Include="pareto_fiabilite_defaillance.resources" />
+    <EmbeddedResource Include="pareto_fiabilite_equipement.resources" />
+    <EmbeddedResource Include="pareto_fiabilite_organe.resources" />
+    <EmbeddedResource Include="pareto_fiabilite_sous_equipement.resources" />
+    <EmbeddedResource Include="pareto_fiabilite_zone.resources" />
+    <EmbeddedResource Include="pdr_cout_famille.resources" />
+    <EmbeddedResource Include="plan_maintenance.resources" />
+    <EmbeddedResource Include="preventive_conditionnelle.resources" />
+    <EmbeddedResource Include="preventive_systematique.resources" />
+    <EmbeddedResource Include="preventive_syst_compteur.resources" />
+    <EmbeddedResource Include="prod_param_anomalie.resources" />
+    <EmbeddedResource Include="prod_param_brique.resources" />
+    <EmbeddedResource Include="prod_param_compteur.resources" />
+    <EmbeddedResource Include="prod_param_compteur_1.resources" />
+    <EmbeddedResource Include="prod_param_equipement.resources" />
+    <EmbeddedResource Include="prod_param_mesure.resources" />
+    <EmbeddedResource Include="prod_param_saisie.resources" />
+    <EmbeddedResource Include="prod_param_saisie1.resources" />
+    <EmbeddedResource Include="prod_rapport.resources" />
+    <EmbeddedResource Include="prod_rapport_anomalie.resources" />
+    <EmbeddedResource Include="prod_rapport_as.resources" />
+    <EmbeddedResource Include="prod_rapport_detail.resources" />
+    <EmbeddedResource Include="prod_rapport_fabrication.resources" />
+    <EmbeddedResource Include="prod_rapport_fabrication_cf.resources" />
+    <EmbeddedResource Include="prod_rapport_fabrication_detail.resources" />
+    <EmbeddedResource Include="prod_rapport_fabrication_entre.resources" />
+    <EmbeddedResource Include="prod_rapport_fabrication_horaire.resources" />
+    <EmbeddedResource Include="prod_rapport_fabrication_produit.resources" />
+    <EmbeddedResource Include="prod_rapport_four.resources" />
+    <EmbeddedResource Include="prod_rapport_four_champ.resources" />
+    <EmbeddedResource Include="prod_rapport_four_sortie.resources" />
+    <EmbeddedResource Include="prod_rapport_fuel.resources" />
+    <EmbeddedResource Include="prod_rapport_preparation.resources" />
+    <EmbeddedResource Include="prod_rapport_prep_general.resources" />
+    <EmbeddedResource Include="prod_recap.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="RadForm_test.resources" />
+    <EmbeddedResource Include="rapport_fiche_diagnostic.resources" />
+    <EmbeddedResource Include="reception.resources" />
+    <EmbeddedResource Include="reception_historique.resources" />
+    <EmbeddedResource Include="refuser_un_da.resources" />
+    <EmbeddedResource Include="reporter_un_da.resources" />
+    <EmbeddedResource Include="retour_magasin.resources" />
+    <EmbeddedResource Include="signature.resources" />
+    <EmbeddedResource Include="signature_commande_attente.resources" />
+    <EmbeddedResource Include="signature_commande_attente_st.resources" />
+    <EmbeddedResource Include="Sous_Famille.resources" />
+    <EmbeddedResource Include="stock_magasin_st.resources" />
+    <EmbeddedResource Include="stock_reparation_st.resources" />
+    <EmbeddedResource Include="stock_sous_traitance.resources" />
+    <EmbeddedResource Include="stock_usine_st.resources" />
+    <EmbeddedResource Include="st_matiere_pr.resources" />
+    <EmbeddedResource Include="symptome.resources" />
+    <EmbeddedResource Include="tableau_comparatif.resources" />
+    <EmbeddedResource Include="tb_achat.resources" />
+    <EmbeddedResource Include="tb_achat_article.resources" />
+    <EmbeddedResource Include="tb_bsm.resources" />
+    <EmbeddedResource Include="tb_flux_achat.resources" />
+    <EmbeddedResource Include="tb_variation_prix.resources" />
+    <EmbeddedResource Include="tb_variation_prix_article.resources" />
+    <EmbeddedResource Include="tb_variation_prix_article_vr.resources" />
+    <EmbeddedResource Include="tb_variation_prix_recap.resources" />
+    <EmbeddedResource Include="test.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
