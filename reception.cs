@@ -26,7 +26,7 @@ namespace GMAO
 			this.panel2.Controls.Clear();
 			this.panel2.Controls.Add(menu_reception);
 			menu_reception.Show();
-			bool flag = page_loginn.stat_user == "Responsable Magasin" | page_loginn.stat_user == "Magasinier" | page_loginn.stat_user == "Responsable Achat";
+			bool flag = UserSession.CurrentUser.Statut == "Responsable Magasin" | UserSession.CurrentUser.Statut == "Magasinier" | UserSession.CurrentUser.Statut == "Responsable Achat";
 			if (flag)
 			{
 				creer_reception creer_reception = new creer_reception();
