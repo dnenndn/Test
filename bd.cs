@@ -1,23 +1,39 @@
-﻿using System;
+using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace GMAO
 {
-	// Token: 0x02000027 RID: 39
-	internal class bd
-	{
-		// Token: 0x06000201 RID: 513 RVA: 0x00055288 File Offset: 0x00053488
+    internal class bd
+    {
+        private static string GetConnectionString(string name)
+        {
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[name];
+
+            if (settings == null)
+            {
+                throw new ArgumentException($"Connection string '{name}' not found in app.config.");
+            }
+
+            return settings.ConnectionString;
+        }
+
+        public SqlConnection GetConnection(string connectionStringName)
+        {
+            string connectionString = GetConnectionString(connectionStringName);
+            SqlConnection connection = new SqlConnection(connectionString);
+            return connection;
+        }
+
+        // This method is kept for compatibility with existing code that uses it.
+        // A better practice is to open connections right before use and close them immediately after.
 		public void ouverture_bd(SqlConnection cnx)
 		{
-			bool flag = cnx.State != ConnectionState.Open;
-			if (flag)
+			if (cnx.State != ConnectionState.Open)
 			{
 				cnx.Open();
 			}
 		}
-
-		// Token: 0x040002DA RID: 730
-		public SqlConnection cnn = new SqlConnection(page_loginn.bas_connextion);
-	}
+    }
 }
