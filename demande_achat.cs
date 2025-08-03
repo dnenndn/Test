@@ -36,8 +36,7 @@ namespace GMAO
 			this.panel2.Controls.Clear();
 			this.panel2.Controls.Add(menu_demande_achat);
 			menu_demande_achat.Show();
-			bool flag = page_loginn.stat_user == "Administrateur";
-			if (flag)
+			if (UserSession.stat_user == "Administrateur")
 			{
 				menu_demande_achat.button3.BackColor = Color.White;
 				menu_demande_achat.button3.ForeColor = Color.Firebrick;
