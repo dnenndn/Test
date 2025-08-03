@@ -36,8 +36,7 @@ namespace GMAO
 			this.panel2.Controls.Clear();
 			this.panel2.Controls.Add(menu_commande);
 			menu_commande.Show();
-			bool flag = page_loginn.stat_user == "Responsable Achat";
-			if (flag)
+			if (UserSession.CurrentUser.Statut == "Responsable Achat")
 			{
 				creer_commande creer_commande = new creer_commande();
 				creer_commande.TopLevel = false;
