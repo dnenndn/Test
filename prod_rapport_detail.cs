@@ -1,0 +1,113 @@
+﻿using System;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
+using Guna.UI2.WinForms;
+using Telerik.WinControls.Themes;
+using Telerik.WinControls.UI;
+
+namespace GMAO
+{
+	// Token: 0x02000111 RID: 273
+	public partial class prod_rapport_detail : Form
+	{
+		// Token: 0x06000C2B RID: 3115 RVA: 0x001DCFC0 File Offset: 0x001DB1C0
+		public prod_rapport_detail()
+		{
+			this.InitializeComponent();
+			this.radGridView1.ViewCellFormatting += new CellFormattingEventHandler(fonction.select_change);
+			this.radGridView1.ViewRowFormatting += new RowFormattingEventHandler(fonction.select_changee);
+		}
+
+		// Token: 0x06000C2C RID: 3116 RVA: 0x001DD013 File Offset: 0x001DB213
+		private void prod_rapport_detail_Load(object sender, EventArgs e)
+		{
+			this.select_champs();
+		}
+
+		// Token: 0x06000C2D RID: 3117 RVA: 0x001DD020 File Offset: 0x001DB220
+		private void select_champs()
+		{
+			bd bd = new bd();
+			this.radGridView1.Rows.Clear();
+			string cmdText = "select prod_rapport_prep_qualite.id, prod_saisie.designation, valeur from prod_rapport_prep_qualite inner join prod_saisie on prod_rapport_prep_qualite.id_qualite = prod_saisie.id where id_rapport = @i1 and id_unite = @i2";
+			SqlCommand sqlCommand = new SqlCommand(cmdText, bd.cnn);
+			sqlCommand.Parameters.Add("@i1", SqlDbType.Int).Value = prod_rapport.id_rpr;
+			sqlCommand.Parameters.Add("@i2", SqlDbType.Int).Value = prod_rapport_preparation.id_unite;
+			SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+			DataTable dataTable = new DataTable();
+			sqlDataAdapter.Fill(dataTable);
+			bool flag = dataTable.Rows.Count != 0;
+			if (flag)
+			{
+				for (int i = 0; i < dataTable.Rows.Count; i++)
+				{
+					this.radGridView1.Rows.Add(new object[]
+					{
+						dataTable.Rows[i].ItemArray[0].ToString(),
+						dataTable.Rows[i].ItemArray[1].ToString(),
+						dataTable.Rows[i].ItemArray[2].ToString()
+					});
+				}
+			}
+		}
+
+		// Token: 0x06000C2E RID: 3118 RVA: 0x001DD160 File Offset: 0x001DB360
+		private void guna2Button1_Click(object sender, EventArgs e)
+		{
+			bool flag = this.radGridView1.Rows.Count != 0;
+			if (flag)
+			{
+				int num = 1;
+				fonction fonction = new fonction();
+				for (int i = 0; i < this.radGridView1.Rows.Count; i++)
+				{
+					bool flag2 = !fonction.is_reel(Convert.ToString(this.radGridView1.Rows[i].Cells[2].Value));
+					if (flag2)
+					{
+						num = 0;
+					}
+				}
+				bool flag3 = num == 1;
+				if (flag3)
+				{
+					bd bd = new bd();
+					for (int j = 0; j < this.radGridView1.Rows.Count; j++)
+					{
+						string cmdText = "update prod_rapport_prep_qualite set valeur = @h where id = @i";
+						SqlCommand sqlCommand = new SqlCommand(cmdText, bd.cnn);
+						sqlCommand.Parameters.Add("@i", SqlDbType.Int).Value = this.radGridView1.Rows[j].Cells[0].Value.ToString();
+						sqlCommand.Parameters.Add("@h", SqlDbType.Real).Value = this.radGridView1.Rows[j].Cells[2].Value.ToString();
+						bd.ouverture_bd(bd.cnn);
+						sqlCommand.ExecuteNonQuery();
+						bd.cnn.Close();
+						string cmdText2 = "select id_mesure from prod_mesure where id_unite = @i1 and id_saisie in(select id_qualite from prod_rapport_prep_qualite where id = @i2)";
+						SqlCommand sqlCommand2 = new SqlCommand(cmdText2, bd.cnn);
+						sqlCommand2.Parameters.Add("@i1", SqlDbType.Int).Value = prod_rapport_preparation.id_unite;
+						sqlCommand2.Parameters.Add("@i2", SqlDbType.Int).Value = this.radGridView1.Rows[j].Cells[0].Value.ToString();
+						SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand2);
+						DataTable dataTable = new DataTable();
+						sqlDataAdapter.Fill(dataTable);
+						bool flag4 = dataTable.Rows.Count != 0;
+						if (flag4)
+						{
+							for (int k = 0; k < dataTable.Rows.Count; k++)
+							{
+								int id_mesure = Convert.ToInt32(dataTable.Rows[k].ItemArray[0]);
+								double valeur = Convert.ToDouble(this.radGridView1.Rows[j].Cells[2].Value);
+								lancement_ot_preventive.creation_ot_mesure(id_mesure, valeur);
+							}
+						}
+					}
+					MessageBox.Show("Modification avec succés");
+				}
+				else
+				{
+					MessageBox.Show("Erreur : Vérifier les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+				}
+			}
+		}
+	}
+}
