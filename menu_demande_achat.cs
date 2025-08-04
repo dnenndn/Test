@@ -185,8 +185,7 @@ namespace GMAO
 		// Token: 0x06000E63 RID: 3683 RVA: 0x00230134 File Offset: 0x0022E334
 		private void menu_demande_achat_Load(object sender, EventArgs e)
 		{
-			bool flag = page_loginn.stat_user == "Administrateur";
-			if (flag)
+			if (UserSession.stat_user == "Administrateur")
 			{
 				this.button1.Visible = false;
 				this.button2.Visible = false;

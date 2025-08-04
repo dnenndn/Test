@@ -138,14 +138,14 @@ namespace GMAO
 					this.radGridView1.Rows[i].Cells[6].Value = "Afficher";
 					this.radGridView1.Rows[i].Cells[7].Value = "Historique Modification";
 				}
-				bool flag2 = page_loginn.stat_user != "Administrateur" & page_loginn.stat_user != "Responsable Méthode" & page_loginn.stat_user != "Responsable Achat";
+				bool flag2 = UserSession.CurrentUser.Statut != "Administrateur" & UserSession.CurrentUser.Statut != "Responsable Méthode" & UserSession.CurrentUser.Statut != "Responsable Achat";
 				if (flag2)
 				{
 					this.radGridView1.Columns[6].IsVisible = false;
 					this.radGridView1.Columns[7].IsVisible = false;
 					this.radGridView1.Columns[8].IsVisible = false;
 				}
-				bool flag3 = page_loginn.stat_user != "Responsable Achat";
+				bool flag3 = UserSession.CurrentUser.Statut != "Responsable Achat";
 				if (flag3)
 				{
 					this.radGridView1.Columns[8].IsVisible = false;
@@ -321,7 +321,7 @@ namespace GMAO
 				gridViewTemplate.Columns[3].HeaderTextAlignment = ContentAlignment.MiddleLeft;
 				gridViewTemplate.Columns[4].HeaderTextAlignment = ContentAlignment.MiddleLeft;
 				gridViewTemplate.Columns[5].HeaderTextAlignment = ContentAlignment.MiddleLeft;
-				bool flag2 = page_loginn.stat_user != "Administrateur" & page_loginn.stat_user != "Responsable Méthode" & page_loginn.stat_user != "Responsable Achat";
+				bool flag2 = UserSession.CurrentUser.Statut != "Administrateur" & UserSession.CurrentUser.Statut != "Responsable Méthode" & UserSession.CurrentUser.Statut != "Responsable Achat";
 				if (flag2)
 				{
 					gridViewTemplate.Columns[4].IsVisible = false;
